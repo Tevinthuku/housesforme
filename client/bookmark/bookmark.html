@@ -1,0 +1,77 @@
+<template name="bookmark">
+  {{#animate type="slideInDown"}}
+        <div class="bookmarkheader blue-grey darken-3">
+            {{#animate type="flipInY"}}
+            <i class="small mdi-hardware-keyboard-backspace left white-text waves-effect waves-circle bookmarktohome"></i>
+            {{/animate}}
+            
+            
+            {{#animate type="flip" delay="300"}}
+            <a class="modal-trigger" href="#bookmarkmodal"><i class="small mdi-action-bookmark-outline right white-text waves-effect waves-circle"></i></a>
+            {{/animate}}
+        </div>
+  {{/animate}}
+  
+  
+  {{#animate type="zoomInUp"}}
+  
+        <!--the tabs-->
+        <div class="row blue-grey darken-3" id="bookmarktabs">
+            <div class="col s12">
+              <ul class="tabs blue-grey darken-3">
+            {{#animate type="zoomInDown" delay="300"}}      
+                <li class="tab col s3 waves-effect waves-light"><a href="#test1" class="white-text active">Houses</a></li>
+            {{/animate}}
+            
+            {{#animate type="zoomInDown" delay="300"}}
+                <li class="tab col s3 waves-effect waves-light"><a href="#test2" class="white-text">Flats</a></li>
+            {{/animate}}
+            
+            {{#animate type="zoomInDown" delay="300"}}
+                <li class="tab col s3 waves-effect waves-light"><a href="#test3" class="white-text"> Offices</a></li>
+            {{/animate}}
+            
+            {{#animate type="zoomInDown" delay="300"}}
+                <li class="tab col s3 waves-effect waves-light"><a href="#test4" class="white-text">Conferences</a></li>
+            {{/animate}}
+              </ul>
+            </div>
+          </div>  
+          
+          
+   {{/animate}}   
+      <!--the content-->
+            <div id="test1" class="col s12">
+              <div id="houses">
+                  {{> houses}}
+              </div>
+            </div>
+            <div id="test2" class="col s12">
+              <div id="flats">
+                {{> flats}}
+              </div>
+            </div>
+            <div id="test3" class="col s12">
+              <div id="offices">
+                {{> offices}}
+              </div>
+            </div>
+            <div id="test4" class="col s12">
+              <div id="conf">
+                 trevor kamau
+                 <div class="biggy"></div>
+              </div>
+            </div>
+            
+              <!-- Modal Structure -->
+  <div id="bookmarkmodal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+         
+</template>

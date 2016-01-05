@@ -1,0 +1,25 @@
+<template name="settings">
+    {{#animate type="zoomInRight"}}
+            <div class="settingsheader purple darken-4">
+                <a  href="{{pathFor route="main"}}"><i class="small mdi-hardware-keyboard-backspace left waves-effect waves-circle waves-light white-text"></i></a>
+                
+            </div>
+    {{/animate}}
+    <div class="row">
+       <h5 class="left black-text">Login</h5> 
+    </div>
+    
+    <div class="row">
+       <!-- Switch -->
+          <div class="switch">
+            <label>
+              Logout
+              <input type="checkbox">
+              <span class="lever"></span>
+              Login
+            </label>
+          </div>       
+    </div>
+    <div class="divider"></div>
+
+</template>

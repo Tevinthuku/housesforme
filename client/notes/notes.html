@@ -1,0 +1,30 @@
+<template name="notes">
+  {{#animate type="zoomInLeft"}}
+    <div class="notesheader indigo darken-4">
+        <!--the back button-->
+        {{#animate type="flipInY"}}
+        <a href="{{pathFor route="main"}}"><i class="small mdi-hardware-keyboard-backspace white-text waves-effect waves-circle"></i></a>
+        {{/animate}}
+        <!--the bouncy buton-->
+        {{#animate type="flip" delay="300"}}
+        <a href="#notesmodal" class="modal-trigger"><i class="small mdi-content-create white-text waves-effect waves-circle right"></i></a>
+        {{/animate}}
+    </div>
+  {{/animate}}
+    
+{{>quickForm collection="Notes" id="quickstring" type="insert" schema="NoteSchema"}} 
+    <div class="nothingherenotes">
+        <h5 class="center-align black-text">Nothing here. Create a new note of what you would most likely want</h5>
+    </div>
+    
+          <!-- Modal Structure -->
+      <div id="notesmodal" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+</template>

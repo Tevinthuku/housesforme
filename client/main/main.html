@@ -1,0 +1,166 @@
+<template name="main">
+   
+  <nav class="teal lighten-1 mainnav">
+    <div class="nav-wrapper">
+      
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu waves-effect waves-light"></i></a>
+      
+      
+      {{#animate type="zoomIn"}}
+      <a href="#!" class="logo">Logo</a>
+      {{/animate}}
+      
+           <i class="mdi-navigation-more-vert right dropdown-button" data-activates='dropdown1'></i>
+           <!--the seach button-->
+           <a href="#" data-activates="slide-search" class="button-search show-on-large"><i class="mdi-action-search waves-effect right waves-light"></i></a>
+ 
+      
+      <!--search side nav-->
+      
+          <ul id="slide-search" class="side-nav">
+            <!--the sarch menu-->
+            <div class="navbar-fixed">
+                <nav class="brown darken-4">
+                  <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                          <input id="search" type="search" required>
+                          <label for="search"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                  </div>
+                </nav>
+            </div>
+            
+            <!--the search results-->
+            <ul class="collection">
+              <li class="collection-item avatar">
+                  <img src="/profile.jpg" alt="" class="circle">
+                  <span class="title black-text">Title</span>
+                  <p class="black-text">First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              
+              <li class="collection-item avatar">
+                  <img src="/profile.jpg" alt="" class="circle">
+                  <span class="title black-text">Title</span>
+                  <p class="black-text">First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              
+              
+            </ul>
+
+          </ul>
+      
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+        </ul>
+        
+      <!--thr big menu-->
+        <ul class="right hide-on-med-and-down">
+          <li class="waves-effect waves-light"><a href="{{pathFor route = "main"}}">Home</a></li>
+          <li class="waves-effect waves-light"><a href="{{pathFor route = "bookmark"}}"><span class="badge">4</span>Bookmarks</a></li>
+          <li class="waves-effect waves-light"><a href="{{pathFor route = "notes"}}"><span class="badge">12</span>Notes</a></li>
+          <li class="waves-effect waves-light"><a href="{{pathFor route="settings"}}">Settings</a></li>
+        </ul>
+        <!--the mobile nav-->
+      <ul class="side-nav" id="mobile-demo">
+        <div class="profileheader grey darken-4">
+          <div id="profilepic">
+             <img src="/profile.jpg" />
+          </div>
+          
+          <h6 class="white-text">Tevin Thuku</h6>
+          
+          
+        </div>
+        <!--thee links-->
+        
+        <div class="sideheadericons grey darken-4">
+          <div class="row">
+            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-note-add left"></i>12</div>
+            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-lock-open left"></i>Out</div>
+            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-bookmark left"></i> 10 </div>
+          </div>
+        </div>
+        
+        <!--main links-->
+        
+        <li><a href="{{pathFor route="main"}}" class="waves-effect waves-teal black-text"><i class="mdi-action-account-balance left black-text"></i>Home</a></li>
+        <li><a href="{{pathFor route="bookmark"}}" class="waves-effect waves-teal black-text"><i class="mdi-action-bookmark left black-text"></i>Bookmarks</a></li>
+        <li><a href="{{pathFor route="notes"}}" class="waves-effect waves-teal black-text"><i class="mdi-content-create left black-text"></i>Notes</a></li>
+        <li><a href="{{pathFor route="settings"}}" class="waves-effect waves-teal black-text"><i class="mdi-action-settings left black-text"></i>Settings</a></li>
+      </ul>
+    </div>
+  </nav>
+      <div id="mainMenuBarAnchor"></div>
+     
+      
+   {{#animate type="slideInDown"}} 
+      <div class="row teal lighten-1 stickermaintabs">
+
+          <div class="col s12">
+            <ul class="tabs  teal lighten-1">
+              
+              {{#animate type="zoomInDown"}}
+              <li class="tab col s3 waves-effect waves-light"><a href="#test1" class="white-text active">Houses</a></li>
+              {{/animate}}
+              
+              {{#animate type="zoomInDown"}}
+              <li class="tab col s3 waves-effect waves-light"><a href="#test2" class="white-text">Flats</a></li>
+              {{/animate}}
+              
+              {{#animate type="zoomInDown"}}
+              <li class="tab col s3 waves-effect waves-light"><a href="#test3" class="white-text"> Offices</a></li>
+              {{/animate}}
+              
+              {{#animate type="zoomInDown"}}
+              <li class="tab col s3 waves-effect waves-light"><a href="#test4" class="white-text">Conferences</a></li>
+              {{/animate}}
+            </ul>
+          </div>
+
+      </div>  
+    {{/animate}}  
+    
+            <div id="test1" class="col s12">
+              <div id="houses">
+                  {{> houses}}
+              </div>
+            </div>
+            <div id="test2" class="col s12">
+              <div id="flats">
+                {{> flats}}
+              </div>
+            </div>
+            <div id="test3" class="col s12">
+              <div id="offices">
+                {{> offices}}
+              </div>
+            </div>
+            <div id="test4" class="col s12">
+              <div id="conf">
+                 trevor kamau
+                 <div class="biggy"></div>
+              </div>
+            </div>
+            
+        {{#animate type="fadeIn"}}    
+        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <a class="btn-floating btn-large teal" href="{{pathFor route="addcategory"}}">
+            <i class="large mdi-action-note-add"></i>
+          </a>
+        </div>
+        {{/animate}}
+         
+</template>

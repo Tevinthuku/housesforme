@@ -1,0 +1,47 @@
+<template name="details">
+    <div class="detailsheader blue-grey darken-4">
+        {{#animate type="flipInY"}}
+        <a href="{{pathFor route="main"}}"><i class="small mdi-hardware-keyboard-backspace white-text waves-effect waves-circle"></i></a>
+        {{/animate}}
+        {{#animate type="bounce" delay="300"}}
+        <i class="small mdi-action-description white-text right waves-effect waves-circle"></i>
+        {{/animate}}
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="/details.jpg"></div>
+    </div>
+    
+     <div class="row blue-grey darken-4" id="detailstabs">
+        <div class="col s12">
+          <ul class="tabs blue-grey darken-4">
+            <li class="tab col s3"><a href="#test1" class="white-text active">Details</a></li>
+            <li class="tab col s3"><a href="#test2" class="white-text">Reviews</a></li>
+            <li class="tab col s3 "><a href="#test3" class="white-text">Amenities</a></li>
+            <li class="tab col s3"><a href="#test4" class="white-text">Location</a></li>
+            <li class="tab col s3"><a href="#test5" class="white-text">Availability</a></li>
+            <li class="tab col s3"><a href="#test6" class="white-text">Photos</a></li>
+          </ul>
+        </div>
+      </div>    
+      
+            <div id="test1" class="col s12">
+                Details
+            </div>
+            <div id="test2" class="col s12">
+                Reviews
+            </div>
+            <div id="test3" class="col s12">
+                Amenities
+            </div>
+            <div id="test4" class="col s12">
+               locaion
+            </div>
+            
+            <div id="test5" class="col s12">
+            <div class="biggy"></div>
+            </div>
+            <div id="test6" class="col s12">
+                Photos
+            </div>
+            
+</template>

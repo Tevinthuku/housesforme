@@ -1,0 +1,73 @@
+.logo{
+    font-size:20px;
+    margin-left:10px;
+}
+.height{
+    height:auto;
+}
+
+
+#stickermaintabs{
+    z-index:10;
+}
+.profileheader{
+    height:200px;
+}
+
+#profilepic{
+    position:relative;
+    width:100px;
+    height:100px;
+    right:0;
+    left:0;
+    margin:auto;
+}
+
+#profilepic img{
+    border-radius:50%;
+    position:relative;
+    top:10px;
+    width:100px;
+    height:100px;
+    right:0;
+    left:0;
+    margin:auto;
+
+}
+
+.profileheader h6{
+    font-size:15px;
+    position:relative;
+    top:20px;
+    text-align:center;
+}
+.biggy{
+    height:1000px;
+}
+
+.stick {
+    position: fixed;
+    top: 0;
+}
+.stickermaintabs{
+    width:100%;
+    z-index:10;
+}
+
+/*the side nav links in the header*/
+.sideheadericons{
+    width:100%;
+    height:auto;
+    position:relative;
+    top:0px;
+}
+.button-search{
+    top:0;
+    position:relative;
+}
+/*the nav in search slide out*/
+.searchseparate{
+   
+    margin:70px;
+    position:relative;
+}

@@ -1,0 +1,14 @@
+.submitnote{
+    width:300px;
+    position:relative;
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.submitnote button{
+    left:0;
+    right:0;
+    position:relative;
+    margin:auto;
+}

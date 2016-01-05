@@ -1,0 +1,100 @@
+<template name="addcategory">
+  
+    <div class="addcategoryheader brown darken-3">
+      {{#animate type="flipInY"}}
+        <i class="small mdi-navigation-chevron-left white-text waves-effect waves-circle addcategorytomain"></i>
+      {{/animate}}
+      
+      {{#animate type="bounce" delay="300"}}
+        <a class="modal-trigger" href="#addcategory"><i class="small mdi-file-file-upload right white-text waves-effect waves-circle"></i></a>
+        {{/animate}}
+    </div>
+    
+    
+    {{#animate type="zoomInUp"}}
+      <div class="row brown darken-3" id="categorytabs">
+        <div class="col s12">
+          <ul class="tabs brown darken-3">
+            {{#animate type="zoomInDown" delay="300"}} 
+            <li class="tab col s3 waves-effect waves-light"><a href="#test1" class="white-text active addcategorychoose">Choose</a></li>
+            {{/animate}}
+            {{#animate type="flip" delay="300"}} 
+            <li class="tab col s3 waves-effect waves-light"><a href="#test2" class="white-text addcategoryuploads">Uploads</a></li>
+            {{/animate}}
+           
+          </ul>
+        </div>
+      </div>  
+    {{/animate}}
+      
+
+        
+                        <!--choose category-->
+                <div id="test1" class="col s12 heighty">
+
+                  <div id="categoryone">
+                     <div class="heighty">
+                      
+                            <div class="row">
+                      <!--living-->  
+                      {{#animate type="zoomInRight"}}
+                                <div class="col s12 m6">
+                                  <div class="card brown darken-1">
+                                    <div class="card-content white-text">
+                                      <span class="card-title">Living</span>
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="{{pathFor route="addingdetails"}}">Houses</a>
+                                      <a href="{{pathFor route="addingdetails"}}">APartments</a>
+                                    </div>
+                                  </div>
+                                </div>
+                      {{/animate}}
+                      
+                      <!--work-->
+                      
+                      {{#animate type="zoomInRight"}}
+                                <div class="col s12 m6">
+                                  <div class="card brown darken-1">
+                                    <div class="card-content white-text">
+                                      <span class="card-title">Working</span>
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a href="{{pathFor route="addingdetails"}}">Offices</a>
+                                      <a href="{{pathFor route="addingdetails"}}">Conferences</a>
+                                    </div>
+                                  </div>
+                                </div>
+                      {{/animate}}
+                            </div>
+                    </div>
+                  </div>
+                    
+                </div>
+                <!-- Uploads-->                
+                <div id="test2" class="col s12">
+                  <div id="categorytwo">
+                    Uploads
+                  </div>
+                  
+                </div>
+
+        
+
+
+      
+        <!-- Modal Structure -->
+        <div id="addcategory" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+</template>

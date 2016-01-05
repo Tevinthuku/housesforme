@@ -1,0 +1,30 @@
+.addingdetailspic{
+    height:250px;
+}
+.addingdetailspic img{
+    width:200px;
+    height:200px;
+    margin:auto;
+    position:relative;
+    border-radius:50%;
+    right:0;
+    left:0;
+}
+#firstimage{
+    margin:auto;
+    position:relative;
+    border-radius:50%;
+    right:0;
+    left:0;
+    width:200px;
+    top:10px;
+}
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: teal;
+   }
+   
+.addingdetailsheader{
+    height:75px;
+}
+       
