@@ -33,3 +33,10 @@ gildaspk:autoform-materialize
 charpeni:materialize-clockpicker
 hedcet:touch-swipe
 hammer:hammer
+useraccounts:materialize
+useraccounts:core
+accounts-password
+cfs:standard-packages
+cfs:gridfs
+cfs:s3
+gwendall:auth-client-callbacks
