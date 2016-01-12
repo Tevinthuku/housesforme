@@ -7,56 +7,17 @@
       
       
       {{#animate type="zoomIn"}}
-      <a href="#!" class="logo">Logo</a>
+      <a href="#!" class="logo">
+Logo
+      </a>
       {{/animate}}
       
            <i class="mdi-navigation-more-vert right dropdown-button" data-activates='dropdown1'></i>
            <!--the seach button-->
-           <a href="#" data-activates="slide-search" class="button-search show-on-large"><i class="mdi-action-search waves-effect right waves-light"></i></a>
+      
  
       
-      <!--search side nav-->
-      
-          <ul id="slide-search" class="side-nav">
-            <!--the sarch menu-->
-            <div class="navbar-fixed">
-                <nav class="brown darken-4">
-                  <div class="nav-wrapper">
-                    <form>
-                        <div class="input-field">
-                          <input id="search" type="search" required>
-                          <label for="search"><i class="material-icons">search</i></label>
-                          <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                  </div>
-                </nav>
-            </div>
-            
-            <!--the search results-->
-            <ul class="collection">
-              <li class="collection-item avatar">
-                  <img src="/profile.jpg" alt="" class="circle">
-                  <span class="title black-text">Title</span>
-                  <p class="black-text">First Line <br>
-                     Second Line
-                  </p>
-                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-              
-              <li class="collection-item avatar">
-                  <img src="/profile.jpg" alt="" class="circle">
-                  <span class="title black-text">Title</span>
-                  <p class="black-text">First Line <br>
-                     Second Line
-                  </p>
-                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-              
-              
-            </ul>
-
-          </ul>
+     
       
         <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content'>
@@ -77,21 +38,17 @@
       <ul class="side-nav" id="mobile-demo">
         <div class="profileheader grey darken-4">
           <div id="profilepic">
-             <img src="/profile.jpg" />
+             <a href="upload/"><img src="{{src}}"></a>
           </div>
           
-          <h6 class="white-text">Tevin Thuku</h6>
+          <h6 class="white-text" id="myMail"></h6>
           
           
         </div>
-        <!--thee links-->
+        <!--the svg-->
         
         <div class="sideheadericons grey darken-4">
-          <div class="row">
-            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-note-add left"></i>12</div>
-            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-lock-open left"></i>Out</div>
-            <div class="col s4 m4 waves-effect waves-light"><i class="mdi-action-bookmark left"></i> 10 </div>
-          </div>
+          
         </div>
         
         <!--main links-->
@@ -150,8 +107,7 @@
             </div>
             <div id="test4" class="col s12">
               <div id="conf">
-                 trevor kamau
-                 <div class="biggy"></div>
+              {{> conferences}}
               </div>
             </div>
             

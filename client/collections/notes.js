@@ -1,21 +1,34 @@
-Notes = new Meteor.Collection('notes');
+Notes = new Mongo.Collection('notes');
 // the allow and deny
 
 Notes.allow({
-    insert:function(userId,doc){
-        return !! userId;
+    insert: function(userId, doc){
+        return !!userId;
+    },
+});
+
+
+// array of characteristics
+NotesCharacteristics = new SimpleSchema({
+    name: {
+        type: String,
+        
+        autoform: {
+            icon: "create",
+
+        },
     }
 });
 
 // the schema
 NoteSchema = new SimpleSchema({
-    Header: {
+    header: {
         type: String,
         autoform: {
             icon: "pets",
         },
     },
-    Description: {
+    description: {
         type: String,
         autoform: {
             icon: "description",
@@ -23,22 +36,49 @@ NoteSchema = new SimpleSchema({
             
         },
     },
-    author: {
-        type: String,
-        label: "Author",
-        autoValue : function(){
-            return this.userId
-        },
-        autoform: {type: "hidden"}
+    
+    
+    characteristics: {
+        type: [NotesCharacteristics]
     },
-    createdAt: {
+    
+    userIntel: {
+        type: String,
+        label: "Type your Name",
+        autoform: {
+            class: "disabled"
+        }
+    },
+    notesDate: {
         type: Date,
-        label : "Created At",
-        autoValue : function(){
-            return new Date()
-        },
-        autoform: {type: "hidden"}
+        label: "Publication Date"
     }
 });
 
-Notes.attachSchema(NoteSchema);
+var postHooks = {
+  before: {
+    insert: function(doc) {
+      if(Meteor.userId()){
+        doc.userIntel = Meteor.userId();
+      }
+      
+      return doc;
+    }
+  }
+}
+
+var postHooksForDate = {
+    before: {
+        insert: function(doc) {
+            if(Meteor.userId()){
+                doc.notesDate = new Date;
+            }
+            return doc
+        }
+    }
+}
+
+AutoForm.addHooks('quickstring',postHooks );
+AutoForm.addHooks('quickstring',postHooks );
+
+Notes.attachSchema( NoteSchema );

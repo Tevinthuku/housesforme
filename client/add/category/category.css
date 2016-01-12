@@ -22,3 +22,14 @@
 .heighty{
     height:auto;
 }
+.center-category-button{
+    width:100px;
+    margin:auto;
+    right:0;
+    left:0;
+}
+.todetails{
+    margin: auto;
+    right:0;
+    left:0;
+}

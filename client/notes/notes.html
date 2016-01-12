@@ -1,5 +1,5 @@
 <template name="notes">
-  {{#animate type="zoomInLeft"}}
+ 
     <div class="notesheader indigo darken-4">
         <!--the back button-->
         {{#animate type="flipInY"}}
@@ -10,12 +10,97 @@
         <a href="#notesmodal" class="modal-trigger"><i class="small mdi-content-create white-text waves-effect waves-circle right"></i></a>
         {{/animate}}
     </div>
-  {{/animate}}
-    
-{{>quickForm collection="Notes" id="quickstring" type="insert" schema="NoteSchema"}} 
-    <div class="nothingherenotes">
-        <h5 class="center-align black-text">Nothing here. Create a new note of what you would most likely want</h5>
+
+  
+{{#animate type="slideInDown"}}  
+  <div class="row indigo darken-4 notestabs">
+    <div class="col s12 indigo darken-4">
+      <ul class="tabs indigo darken-4">
+        {{#animate type="zoomInDown"}}
+        <li class="tab col s3 waves-effect waves-light"><a href="#test1" class="white-text">Create</a></li>
+        {{/animate}}
+        {{#animate type="zoomInDown"}}
+        <li class="tab col s3 waves-effect waves-light"><a class="active white-text" href="#test2">Notes</a></li>
+        {{/animate}}
+      </ul>
     </div>
+  </div>
+{{/animate}}
+  <!--content-->
+    <div id="test1" class="col s12">
+      <div id="notescreateauto">
+        <!--omitFields="author, createdAt"-->
+        <!--{{>quickForm collection="Notes" id="quickstring" type="insert" schema="NoteSchema"}}-->
+        
+                  {{#autoForm collection="Notes" id="quickstring" type="insert"}}
+                  
+                  {{> afQuickField name='header' icon='pets'}}
+                  {{> afQuickField name='description' type='textarea' icon='description'}}
+                  {{> afQuickField name='characteristics'}}
+        
+          <button class="btn waves-effect waves-light notessubmit" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        {{/autoForm}}
+      </div>
+        
+    </div>
+    <div id="test2" class="col s12">
+      <div id="notesstore">
+        <div class="heightynotes">
+          <div class="row">
+        {{#if Template.subscriptionsReady}}
+          {{#transition in="slideIn" out="slideIn"}}
+            {{#each notesshow}}
+               <div class="col s12 m6 l4">
+                 <div class="card">
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{header}}<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div>{{description}}</div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{header}}<i class="material-icons right">close</i></span>
+                              <table class="striped">
+                                  <thead>
+                                    <tr>
+                                      
+                                        <th data-field="id">Characteristics</th>
+                                      
+                                    </tr>
+                                  </thead>
+                          
+                                  <tbody>
+                                    <!--fix this-->
+                                    {{#each characteristics}}
+                                      <tr>
+                                        
+                                           <td>{{name}}</td>
+                                        
+                                      </tr>
+                                    {{/each}}
+                                  </tbody>
+                              </table>
+            
+                      </div>
+                  </div>
+               </div>
+            {{/each}}
+          {{/transition}}
+          
+          {{else}}
+          
+           {{> loading}}
+           
+        {{/if}}
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+ 
+
     
           <!-- Modal Structure -->
       <div id="notesmodal" class="modal">
@@ -27,4 +112,41 @@
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
       </div>
+</template>
+
+<template name="loading">
+ <div class="centerloader">
+   <div class="preloader-wrapper valignity big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+ </div>
+ </div>
 </template>

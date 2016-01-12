@@ -1,24 +1,40 @@
 <template name="flats">
         <div class="height">
         <div class="row">
+          {{#if Template.subscriptionsReady}} 
+           {{#each flats}}
             <div class="col s12 m6 l4">
-                  <div class="card">
+                  <div class="card {{#if inBookmark}}z-depth-5 {{/if}}">
                         <div class="card-image waves-effect waves-block waves-light">
                           <img class="activator" src="/town2.jpg">
                         </div>
                         <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">Card Title<i class="mdi-navigation-more-vert right"></i></span>
-                          
-                          <p><a href="{{pathFor route="details"}}">View Full</a></p>
-                          
+                          <span class="card-title activator grey-text text-darken-4">{{title}}<i class="mdi-navigation-more-vert right"></i></span>
+                          <p><a href="#">This is a link</a></p>
                         </div>
                         <div class="card-reveal">
                           <span class="card-title grey-text text-darken-4">Card Title<i class="mdi-navigation-close right"></i></span>
                           <p>Here is some more information about this product that is only revealed once clicked on.</p>
                           <!--more action butons-->
+                          
+
+                          
+                        <div class="row">
+                         <div class="booky">
+                            <a class="waves-effect bookmark-button waves-teal btn-flat {{#if inBookmark}}unbookmark{{/if}}"> Bookmark</a>
+                         </div>
+                       </div>
+                       
+
+
+                            
                         </div>
                   </div>
             </div>
+          {{/each}}    
+        {{else}}
+        {{>loading}}
+        {{/if}}            
         </div>
     </div>
 </template>

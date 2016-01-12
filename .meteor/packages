@@ -16,8 +16,6 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 materialize:materialize
 bambattajb:sticky
@@ -29,7 +27,6 @@ ccorcos:transitioner
 fastclick
 aldeed:autoform
 aldeed:collection2
-gildaspk:autoform-materialize
 charpeni:materialize-clockpicker
 hedcet:touch-swipe
 hammer:hammer
@@ -38,5 +35,13 @@ useraccounts:core
 accounts-password
 cfs:standard-packages
 cfs:gridfs
-cfs:s3
 gwendall:auth-client-callbacks
+d3js:d3
+meteortoys:allthings
+insecure
+check
+msavin:mongol
+gildaspk:autoform-medium
+tomi:upload-jquery
+tomi:upload-server
+gildaspk:autoform-materialize

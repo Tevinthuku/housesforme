@@ -3,7 +3,7 @@ Template.bookmark.rendered = function(){
 // modal 
 $('.modal-trigger').leanModal();
 
-
+// the nav goes
 $('#bookmarktabs').pushpin({ top: $('#bookmarktabs').offset().top });
 
 // the tabs

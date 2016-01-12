@@ -1,4 +1,5 @@
 <template name="addingdetails">
+
     <div class="addingdetailsheader grey darken-4">
       {{#animate type="flipInY"}}
         <a href="{{pathFor route="addcategory"}}"><i class="small mdi-hardware-keyboard-backspace white-text waves-effect waves-circle"></i></a>
@@ -8,70 +9,39 @@
       <i class="small mdi-file-cloud-upload right white-text waves-effect waves-circle"></i>
        {{/animate}} 
     </div>
-    <div class="addingdetailspic grey darken-4">
-        <div id="firstimage">
-          {{#animate type="flipInY"}}
-            <img src="/town3.jpg" />
-          {{/animate}}
-        </div>
-    </div>
+  
 
-<!--the form filled-->
-<div class="height">
-  <form action="#">
-    <div class="file-field input-field">
-      <div class="btn">
-        <span><i class="mdi-file-file-upload left"></i>Cover Image</span>
-        <input type="file" accept="image/*">
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
-      </div>
-    </div>
-    <div class="row">
-        <!---product name-->
-        <div class="col s12 m6 l4">
-        <div class="input-field">
-                <i class="material-icons prefix">shop</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix" class=""> Name</label>
-        </div>
-        </div>
-        
-        <!--the product descrption-->
-        <div class="col s12 m6 l8">
-            <div class="input-field">
-                    <i class="material-icons prefix">book</i>
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix" class="">Details</label>
-            </div>
-            
-        </div>
-    </div>
-    
-    <!--dynamic data injection-->
-    <div class="row">
-        
-        <!--the amenities template-->
-        <div class="col s12 m6 l6"></div>
-        
-        <!--the days available  with time input too template-->
-        <div class="col s12 m6 l6"></div>
-            
-    </div>
-    
-    <!--pictures template-->
-    
-    <div class="row">
-        <div class="col s12 m6 l6"></div>
-    </div>
-    
-    
-          <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large teal accent-4">
-              <i class="large mdi-content-send"></i>
-            </a>
-          </div>
-  </form>
-</div>
+
+   <!--the form filled-->
+  {{#autoForm collection="Posts" id="add-details-form" type="insert"}}
+  {{> afQuickField name="title"}}
+  {{> afQuickField name='category'}}
+  <h5 class="center-align">Type the description of your product and highlight for more details</h5>
+  {{> afFieldInput name="picture" metadata=metadataHelper}}
+  <div class="mediummargin"></div>
+  {{> afQuickField name='timeready'}}
+  
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+  </button>
+  {{/autoForm}}
+</template>
+
+
+<!--the preview template-->
+<template name="myFilePreview">
+  <a href="{{file.url}}">{{file.original.name}}</a>
+</template>
+
+<!--the close and open buttons-->
+<template name="mySelectFileBtn">
+  <button type="button" class="btn js-af-select-file">Upload
+  <i class="material-icons right">done</i>
+  </button>
+</template>
+
+<template name="myRemoveFileBtn">
+  <button type="button" class="btn js-af-remove-file">Remove
+  <i class="material-icons right">close</i>
+  </button>
 </template>

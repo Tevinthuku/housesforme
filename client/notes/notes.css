@@ -12,3 +12,28 @@
     position:relative;
     margin:auto;
 }
+.notestabs{
+    width:100%;
+    z-index:10;
+}
+
+/*The heighty*/
+.heightynotes{
+    height:auto;
+}
+
+/*the center align*/
+.valignity{
+    position:relative;
+    margin:auto;
+    right:0;
+    left:0;
+    width:100px;
+}
+.centerloader{
+    width:100px;
+    position:relative;
+    margin:auto;
+    right:0;
+    left:0;
+}
